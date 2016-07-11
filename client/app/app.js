@@ -18,13 +18,10 @@ angular.module('fantasyDragRace', [
   })
   .when('/rules', {
     templateUrl: 'app/views/rules.html',
-    // controller: 'RulesController'
-    // controller to be updated
   })  
   .when('/home', {
     templateUrl: 'app/views/home.html',
     controller: 'HomeController'
-    // controller to be updated
   })
   .when('/selection', {
     templateUrl: 'app/views/selection.html',
