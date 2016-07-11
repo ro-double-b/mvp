@@ -2,7 +2,9 @@ angular.module('fantasyDragRace', [
   'ngRoute', 
   'fantasyDragRace.auth',
   'fantasyDragRace.select',
-  'fantasyDragRace.result'
+  'fantasyDragRace.result',
+  'fantasyDragRace.home'
+
   ])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
@@ -16,12 +18,12 @@ angular.module('fantasyDragRace', [
   })
   .when('/rules', {
     templateUrl: 'app/views/rules.html',
-    // controller: 'AuthController'
+    // controller: 'RulesController'
     // controller to be updated
   })  
   .when('/home', {
     templateUrl: 'app/views/home.html',
-    // controller: 'HomeController'
+    controller: 'HomeController'
     // controller to be updated
   })
   .when('/selection', {
