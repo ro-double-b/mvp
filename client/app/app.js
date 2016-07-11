@@ -1,11 +1,13 @@
-angular.module('fantasyDragRace', ['ngRoute'])
-.config(function($routeProvider) {
+angular.module('fantasyDragRace', ['ngRoute', 'fantasyDragRace.auth'])
+.config(function($routeProvider, $locationProvider) {
   $routeProvider
-  .when('/sigup', {
-    templateurl: 'app/views/signup.html'
+  .when('/signup', {
+    templateUrl: 'app/views/signup.html',
+    controller: 'AuthController'
   })
   .when('/login', {
-    templateurl: 'app/views/login.html'
+    templateUrl: 'app/views/login.html',
+    controller: 'AuthController'
   })
   .otherwise({
     redirectTo: '/'
