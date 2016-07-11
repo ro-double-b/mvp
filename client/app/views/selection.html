@@ -1,7 +1,14 @@
 <h3>Who do you think will win this week? </h3>
 
 <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default"><img height='150'src='../images/adore.jpg'><p>Adore Delano</p></button>
-  <button type="button" class="btn btn-default"><img height='150'src='../images/alaska.jpg'><p>Alaska</p></button>
-  <button type="button" class="btn btn-default"><img height='150'src='../images/alyssa.jpg'><p>Alyssa Edwards</p></button>
+  <button type="button" click(adore) class="btn btn-default"><img height='100'src='../images/adore.jpg'><p>Adore Delano</p></button>
+  <button type="button" click(alaska) class="btn btn-default"><img height='100'src='../images/alaska.jpg'><p>Alaska</p></button>
+  <button type="button" click(alyssa) class="btn btn-default"><img height='100'src='../images/alyssa.jpg'><p>Alyssa Edwards</p></button>
+  <button>Submit!</button>
+  {{selection}}
 </div>
+
+  <div>
+  <input type="text" ng-model="test">
+  <h1>{{test}}</h1>
+  </div>

@@ -1,4 +1,9 @@
-angular.module('fantasyDragRace', ['ngRoute', 'fantasyDragRace.auth'])
+angular.module('fantasyDragRace', [
+  'ngRoute', 
+  'fantasyDragRace.auth',
+  'fantasyDragRace.select',
+  'fantasyDragRace.result'
+  ])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/signup', {
@@ -11,26 +16,24 @@ angular.module('fantasyDragRace', ['ngRoute', 'fantasyDragRace.auth'])
   })
   .when('/rules', {
     templateUrl: 'app/views/rules.html',
-    controller: 'AuthController'
+    // controller: 'AuthController'
     // controller to be updated
   })  
   .when('/home', {
     templateUrl: 'app/views/home.html',
-    controller: 'AuthController'
+    // controller: 'HomeController'
     // controller to be updated
   })
   .when('/selection', {
     templateUrl: 'app/views/selection.html',
-    controller: 'AuthController'
-    // controller to be updated
+    controller: 'SelectController'
   })
   .when('/results', {
     templateUrl: 'app/views/results.html',
-    controller: 'AuthController'
-    // controller to be updated
+    controller: 'ResultController'
   })
   .otherwise({
-    redirectTo: '/'
+    redirectTo: '/home'
   })
 
 })
