@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  Fantasy Drag Race
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  This is a game for the fanbase of RuPaul's Drag race, where each week they can compete with their friends and score based on who they think will win
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  After siging in, each user will be able to select which queen they think will win that week.  Bases on the results, each user will get scored and those scores can be compared with the whole userbase
 
 ## Problem ##
-  > Describe the problem your product solves.
+  This will just be a fun game for users
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  n/a
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+ "It's Fantasy Football with less football and more pigs in wigs"
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  After loging in you can get started by selecting who you think will be the winner
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "I loved playing and competiting with my friends!  It adds another element to watching my favorite show!"
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  Go to the site and signup!
