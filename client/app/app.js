@@ -34,4 +34,13 @@ angular.module('fantasyDragRace', [
     redirectTo: '/home'
   })
 })
-
+.factory('RenderResults', function($http) {
+  return $http({
+    method: 'GET',
+    url: '/api/selection', 
+  }).then(function success(response) {
+    console.log('congrats you got your get response back to the factory man')
+  }, function error(response) {
+    console.log('bummer man you failed to get your response back in an orderly fashion.  go directly to jail do not pass go, hiiiiii')
+  })
+})

@@ -17,13 +17,20 @@ module.exports = {
   // },
 
   postSignup: function(req, res) { // function handling when you click a sign up button
+    console.log(req.body)
     // check to see if the user has been taken before
-      // if not then will submit to the database
-
-      // will also have to send to the global scope that you are said user
-
-      // else it will respond back to the login page
-    console.log('you got into this get login request')
+    schemas.User.findOne({'user_name': req.body.user}, function(err, doc) {
+      if(err) { // if not then will submit to the database
+        var user = new schemas.User({
+          user_name: req.body.user,
+          user_password: req.body.password
+        })
+        user.save(function(err) {
+          if(err) throw err;
+          console.log('new user created!')
+        })
+      }
+    })
   },
 
   postSelection: function(req, res) { // function handling when you click the select button
