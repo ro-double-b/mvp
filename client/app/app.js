@@ -34,5 +34,4 @@ angular.module('fantasyDragRace', [
   .otherwise({
     redirectTo: '/home'
   })
-
 })
