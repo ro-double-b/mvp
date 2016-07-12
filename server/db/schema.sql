@@ -1,4 +1,3 @@
--- ---
 -- Globals
 -- ---
 
@@ -82,11 +81,11 @@ ALTER TABLE `Selections` ADD FOREIGN KEY (selection_week_id) REFERENCES `Wins` (
 -- Test Data
 -- ---
 
--- INSERT INTO `Users` (`user_id`,`user_name`,`user_password`) VALUES
--- ('','','');
--- INSERT INTO `Queens` (`queen_id`,`queen_name`) VALUES
--- ('','');
--- INSERT INTO `Wins` (`week_id`,`win_queen_id`) VALUES
--- ('','');
--- INSERT INTO `Selections` (`selection_id`,`selection_user_id`,`selection_queen_id`,`selection_week_id`) VALUES
--- ('','','','');
+INSERT INTO `Users` (`user_id`,`user_name`,`user_password`) VALUES
+('1','ro-double-b','hahaha');
+INSERT INTO `Queens` (`queen_id`,`queen_name`) VALUES
+('1','alaska');
+INSERT INTO `Wins` (`week_id`,`win_queen_id`) VALUES
+('1','1');
+INSERT INTO `Selections` (`selection_id`,`selection_user_id`,`selection_queen_id`,`selection_week_id`) VALUES
+('1','1','1','1');
