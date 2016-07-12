@@ -4,7 +4,7 @@ var bodyParser = require('body-parser')
 // var methodOverride = require('methodOverride')
 var mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/mvp')
-var schemas = require('./db/models.js')
+
 var controllers = require('./controllers.js')
 
 var port = 3000
@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/../client'))
 
 // existing users
 app.post('/api/users/login', controllers.postLogin)
-app.get('/api/users/login', controllers.getLogin) 
+// app.get('/api/users/login', controllers.getLogin) 
 
 // new users
 app.post('/api/users/signup', controllers.postSignup)
