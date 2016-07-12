@@ -3,8 +3,8 @@ var app = express();
 var bodyParser = require('body-parser')
 // var methodOverride = require('methodOverride')
 var mongoose = require('mongoose')
-// mongoose.connect('mongodb://localhost:27107/db')
-// require('./db/models.js')
+mongoose.connect('mongodb://127.0.0.1:27017/db')
+var schemas = require('./db/models.js')
 
 var port = 3000
 
@@ -14,7 +14,15 @@ app.use(express.static(__dirname + '/../client'))
 
 // existing users
 app.post('/api/users/login', function(request, response) {
-  console.log(request.body)
+  console.log(schemas.User)
+  console.log(request.body.user)
+  // schemas.User.create({user_name: request.body.user, user_password: request.body.password}, function(err, res) {
+  //   if(err) {
+  //     console.log(err)
+  //   } else {
+  //     console.log
+  //   }
+  // })
   console.log('testin you just sent a post request buddy: signin')
 })
 app.get('/api/users/login', function(request, response) {

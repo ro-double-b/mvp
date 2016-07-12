@@ -6,7 +6,7 @@ angular.module('fantasyDragRace.auth', [])
       method: 'POST',
       url: '/api/users/login',
       type: 'application/json',
-      data: JSON.stringify(user)
+      data: user
     }).then(function success(res) {
       console.log('Login Post Success')
     }, function error(res) {
@@ -19,7 +19,7 @@ angular.module('fantasyDragRace.auth', [])
       method: 'POST',
       url: '/api/users/signup',
       type: 'application/json',
-      data: JSON.stringify(user)
+      data: user
     }).then(function success(response) {
       console.log('Signup Post Success')
     }, function error(response) {

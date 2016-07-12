@@ -1,41 +1,31 @@
 var mongoose = require('mongoose')
 
-var userSchema = new mongoose.Schema({
-  user_id: {
-    type: Number,
+
+var userSchemas = new mongoose.Schema({
+  user_name: {
+    type: String,
     unique: true
   },
-  user_name: String,
   user_password: String
 })
 
-var queenSchema = new mongoose.Schema({
-  queen_id: {
-    type: Number,
-    unique: true
-  },
+var queenSchemas = new mongoose.Schema({
   queen_name: String
 })
 
-var winSchema = new mongoose.Schema({
-  week_id: {
-    type: Number,
-    unique: true
-  },
+var winSchemas = new mongoose.Schema({
   win_queen_id: Number
 })
 
-var selectionSchema = new mongoose.Schema({
-  selection_id: {
-    type: Number,
-    unique: true
-  },
+var selectionSchemas = new mongoose.Schema({
   selection_user_id: Number,
   selection_queen_id: Number,
   selection_week_id: Number
 })
 
-mongoose.model('User', userSchema)
-mongoose.model('Queen', queenSchema)
-mongoose.model('Win', winSchema)
-mongoose.model('Selection', selectionSchema)
+module.exports = {
+  User: mongoose.model('User', userSchemas),
+  Queen: mongoose.model('Queen', queenSchemas),
+  Win: mongoose.model('Win', winSchemas),
+  Selection: mongoose.model('Selection', selectionSchemas),
+}
