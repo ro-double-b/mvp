@@ -35,3 +35,4 @@ angular.module('fantasyDragRace', [
     redirectTo: '/home'
   })
 })
+

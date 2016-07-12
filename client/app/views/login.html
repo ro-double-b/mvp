@@ -1,8 +1,8 @@
 <div id='login'>
   <h3>Log In</h3>
-  <form>
-    <input type='text'>
-    <input type='text'>
+  <form ng-submit='login()'>
+    <input type='text' ng-model='user.username'>
+    <input type='text' ng-model='user.password'>
     <button>Log in</button>
   </form>
   <p>Not a member? <a href='#/signup'>Sign up!</a></p>
