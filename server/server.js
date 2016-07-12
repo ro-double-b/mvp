@@ -4,6 +4,7 @@ var bodyParser = require('body-parser')
 // var methodOverride = require('methodOverride')
 var mongoose = require('mongoose')
 mongoose.connect('mongoose://localhose:27102/db')
+require('./db/models.js')
 
 var port = 3000
 
