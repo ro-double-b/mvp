@@ -17,10 +17,9 @@ module.exports = {
   // },
 
   postSignup: function(req, res) { // function handling when you click a sign up button
-    console.log(req.body)
     // check to see if the user has been taken before
     schemas.User.findOne({'user_name': req.body.user}, function(err, doc) {
-      if(err) { // if not then will submit to the database
+      if(doc === null) { // if not then will submit to the database
         var user = new schemas.User({
           user_name: req.body.user,
           user_password: req.body.password
@@ -29,6 +28,8 @@ module.exports = {
           if(err) throw err;
           console.log('new user created!')
         })
+      } else {
+        console.log('this username has already been taken!')
       }
     })
   },
