@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
 // var methodOverride = require('methodOverride')
+var mongoose = require('mongoose')
+mongoose.connect('mongoose://localhose:27102/db')
 
 var port = 3000
 
