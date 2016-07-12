@@ -1,12 +1,12 @@
 angular.module('fantasyDragRace.auth', [])
 .controller('AuthController', function($scope, $http) {
-  var user = $scope.user;
 
   $scope.login = function(user) {
     return $http({
       method: 'POST',
       url: '/api/users/login',
-      data: user
+      type: 'application/json',
+      data: JSON.stringify(user)
     }).then(function success(res) {
       console.log('Login Post Success')
     }, function error(res) {
@@ -18,7 +18,8 @@ angular.module('fantasyDragRace.auth', [])
     return $http({
       method: 'POST',
       url: '/api/users/signup',
-      data: user
+      type: 'application/json',
+      data: JSON.stringify(user)
     }).then(function success(response) {
       console.log('Signup Post Success')
     }, function error(response) {

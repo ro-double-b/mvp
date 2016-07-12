@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser')
 // var methodOverride = require('methodOverride')
 var mongoose = require('mongoose')
-// mongoose.connect('mongodb://localhose:27102/db')
+// mongoose.connect('mongodb://localhost:27107/db')
 // require('./db/models.js')
 
 var port = 3000
@@ -14,6 +14,7 @@ app.use(express.static(__dirname + '/../client'))
 
 // existing users
 app.post('/api/users/login', function(request, response) {
+  console.log(request.body)
   console.log('testin you just sent a post request buddy: signin')
 })
 app.get('/api/users/login', function(request, response) {
@@ -21,6 +22,7 @@ app.get('/api/users/login', function(request, response) {
 })
 // new users
 app.post('/api/users/signup', function(request, response) {
+  console.log(request.body)
   console.log('testin you just sent a post request buddy: signup')
 })
 
