@@ -4,7 +4,6 @@ angular.module('fantasyDragRace', [
   'fantasyDragRace.select',
   'fantasyDragRace.result',
   'fantasyDragRace.home'
-
   ])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider

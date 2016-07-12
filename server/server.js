@@ -3,8 +3,9 @@ var app = express();
 var bodyParser = require('body-parser')
 // var methodOverride = require('methodOverride')
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/db')
+mongoose.connect('mongodb://localhost/mvp')
 var schemas = require('./db/models.js')
+var controllers = require('./controllers.js')
 
 var port = 3000
 
@@ -13,35 +14,15 @@ app.use(bodyParser.json())
 app.use(express.static(__dirname + '/../client'))
 
 // existing users
-app.post('/api/users/login', function(request, response) {
-  console.log(schemas.User)
-  console.log(request.body.user)
-  // schemas.User.create({user_name: request.body.user, user_password: request.body.password}, function(err, res) {
-  //   if(err) {
-  //     console.log(err)
-  //   } else {
-  //     console.log
-  //   }
-  // })
-  console.log('testin you just sent a post request buddy: signin')
-})
-app.get('/api/users/login', function(request, response) {
-  // nothing makes a request to this route yet
-})
-// new users
-app.post('/api/users/signup', function(request, response) {
-  console.log(request.body)
-  console.log('testin you just sent a post request buddy: signup')
-})
+app.post('/api/users/login', controllers.postLogin)
+app.get('/api/users/login', controllers.getLogin) 
 
-// select queen
-app.post('/api/selection', function(request, response) {
-  // nothing makes a request to this route yet
-})
-// display results
-app.get('/api/selection', function(request, response) {
-  // nothing makes a request to this route yet
-})
+// new users
+app.post('/api/users/signup', controllers.postSignup)
+
+// Selection
+app.post('/api/selection', controllers.postSelection)
+app.get('/api/selection', controllers.getSelection)
 
 app.listen(port);
 console.log('Your server is listening on port: ' + port)
