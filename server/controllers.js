@@ -3,18 +3,16 @@ var schemas = require('./db/models.js')
 module.exports = {
   postLogin: function(req, res) { // function handling when you click the sign in button
     // check to see if the user is in the database
-      // if so checks to see if the password matches what is in the database
-        // if so responds back with a success
-
-      // will also have to send to the global scope that you are said user
-
-    // else sends back an error back to the login page
-   console.log('you got into this post login request!')   
+    schemas.User.findOne({'user_name': req.body.user, 'user_password': req.body.password}, function(err, doc) {
+      if(doc !== null) {
+        res.send(doc)
+        console.log('successfully logged in!')
+      } else {
+        res.send('null')
+        console.log('sorry your username or password are incorrect')
+      }
+    })
   },
-
-  // getLogin: function(req, res) {
-  //   console.log('you got into this get login request')
-  // },
 
   postSignup: function(req, res) { // function handling when you click a sign up button
     // check to see if the user has been taken before
@@ -24,11 +22,13 @@ module.exports = {
           user_name: req.body.user,
           user_password: req.body.password
         })
-        user.save(function(err) {
+        user.save(function(err, doc) {
           if(err) throw err;
+          res.send(doc)
           console.log('new user created!')
         })
       } else {
+        res.send('null')
         console.log('this username has already been taken!')
       }
     })

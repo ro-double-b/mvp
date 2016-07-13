@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/mvp')
 
 var controllers = require('./controllers.js')
 
-var port = 3000
+var port = 3200
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
@@ -15,7 +15,6 @@ app.use(express.static(__dirname + '/../client'))
 
 // existing users
 app.post('/api/users/login', controllers.postLogin)
-// app.get('/api/users/login', controllers.getLogin) 
 
 // new users
 app.post('/api/users/signup', controllers.postSignup)
