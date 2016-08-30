@@ -2,8 +2,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
 // var methodOverride = require('methodOverride')
-var mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/mvp')
+// var mongoose = require('mongoose')
+// mongoose.connect('mongodb://localhost/mvp')
 
 var controllers = require('./controllers.js')
 

@@ -1,4 +1,4 @@
-var schemas = require('./db/models.js')
+// var schemas = require('./db/models.js')
 
 module.exports = {
   postLogin: function(req, res) { // function handling when you click the sign in button
